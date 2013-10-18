@@ -19,9 +19,11 @@ The following example code is the template used throughout.
 
 Location is a string value and may be one of the following.
 
+### 'beforebegin' ###
+
 `'beforebegin'` will insert the value of `content` *before* the calling element.
 
-### Example ###
+#### Example ####
 
     <script>
       var box2 = document.getElementById("box2");
@@ -38,9 +40,11 @@ will lead to
       <p>Some example text</p>
     </div>
 
+### 'afterbegin' ###
+
 `'afterbegin'` will insert the value of `content` as the first child of the calling element.
 
-###E xample ###
+#### Example ####
 
     <script>
       var box2 = document.getElementById("box2");
@@ -58,9 +62,11 @@ will lead to
       <p>Some example text</p>
     </div>
 
+### 'beforeend' ###
+
 `'beforeend'` will insert the value of `content` as the last child of the calling element.
 
-### Example ###
+#### Example ####
 
     <script>
       var box2 = document.getElementById("box2");
@@ -77,9 +83,11 @@ will lead to
       <p>Inserted text</p>
     </div>
 
+### 'afterend' ###
+
 `'afterend'` will insert the value of `content` immediately following the calling element.
 
-### Example ###
+#### Example ####
 
     <script>
       var box2 = document.getElementById("box2");
