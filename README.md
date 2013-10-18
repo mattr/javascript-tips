@@ -17,79 +17,82 @@ The following example code is the template used throughout.
       <p>Some example text</p>
     </div>
 
-Location is a string value and may be one of the following:
+Location is a string value and may be one of the following.
 
-* `'beforebegin'` will insert the value of `content` *before* the calling element.
-  
-  Example:
+`'beforebegin'` will insert the value of `content` *before* the calling element.
 
-      <script>
-        var box2 = document.getElementById("box2");
-        box2.insertAdjacentHTML('beforebegin', "<div><p>Inserted text</p></div>");
-      </script>
+### Example ###
 
-  will lead to
+    <script>
+      var box2 = document.getElementById("box2");
+      box2.insertAdjacentHTML('beforebegin', "<div><p>Inserted text</p></div>");
+    </script>
 
-      <div id="box1">
-        <p>Some example text</p>
-      </div>
-      <div><p>Inserted text</p></div>
-      <div id="box2">
-        <p>Some example text</p>
-      </div>
-* `'afterbegin'` will insert the value of `content` as the first child of the calling element.
-  
-  Example:
+will lead to
 
-      <script>
-        var box2 = document.getElementById("box2");
-        box2.insertAdjacentHTML('afterbegin', '<p>Inserted text</p>');
-      </script>
+    <div id="box1">
+      <p>Some example text</p>
+    </div>
+    <div><p>Inserted text</p></div>
+    <div id="box2">
+      <p>Some example text</p>
+    </div>
 
-  will lead to
+`'afterbegin'` will insert the value of `content` as the first child of the calling element.
 
-      <div id="box1">
-        <p>Some example text</p>
-      </div>
-      <div><p>Inserted text</p></div>
-      <div id="box2">
-        <p>Inserted text</p>
-        <p>Some example text</p>
-      </div>
-* `'beforeend'` will insert the value of `content` as the last child of the calling element.
-  
-  Example:
+###E xample ###
 
-      <script>
-        var box2 = document.getElementById("box2");
-        box2.insertAdjacentHTML('beforeend', "<div><p>Inserted text</p></div>");
-      </script>
+    <script>
+      var box2 = document.getElementById("box2");
+      box2.insertAdjacentHTML('afterbegin', '<p>Inserted text</p>');
+    </script>
 
-  will lead to
+will lead to
 
-      <div id="box1">
-        <p>Some example text</p>
-      </div>
-      <div id="box2">
-        <p>Some example text</p>
-        <p>Inserted text</p>
-      </div>
-* `'afterend'` will insert the value of `content` immediately following the calling element.
-  
-  Example:
+    <div id="box1">
+      <p>Some example text</p>
+    </div>
+    <div><p>Inserted text</p></div>
+    <div id="box2">
+      <p>Inserted text</p>
+      <p>Some example text</p>
+    </div>
 
-      <script>
-        var box2 = document.getElementById("box2");
-        box2.insertAdjacentHTML('afterend', "<div><p>Inserted text</p></div>");
-      </script>
+`'beforeend'` will insert the value of `content` as the last child of the calling element.
 
-  will lead to
+### Example ###
 
-      <div id="box1">
-        <p>Some example text</p>
-      </div>
-      <div id="box2">
-        <p>Inserted text</p>
-        <p>Some example text</p>
-      </div>
-      <div><p>Inserted text</p></div>
+    <script>
+      var box2 = document.getElementById("box2");
+      box2.insertAdjacentHTML('beforeend', "<div><p>Inserted text</p></div>");
+    </script>
+
+will lead to
+
+    <div id="box1">
+      <p>Some example text</p>
+    </div>
+    <div id="box2">
+      <p>Some example text</p>
+      <p>Inserted text</p>
+    </div>
+
+`'afterend'` will insert the value of `content` immediately following the calling element.
+
+### Example ###
+
+    <script>
+      var box2 = document.getElementById("box2");
+      box2.insertAdjacentHTML('afterend', "<div><p>Inserted text</p></div>");
+    </script>
+
+will lead to
+
+    <div id="box1">
+      <p>Some example text</p>
+    </div>
+    <div id="box2">
+      <p>Inserted text</p>
+      <p>Some example text</p>
+    </div>
+    <div><p>Inserted text</p></div>
